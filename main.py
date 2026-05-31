@@ -2,11 +2,13 @@ import os
 import sys
 from datetime import datetime
 from dotenv import load_dotenv
+
+load_dotenv(override=True)
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+
 from crewai import Crew, Process
 from agents import create_agents
 from tasks import create_tasks
-
-load_dotenv()
 
 
 def validate_env():
